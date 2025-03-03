@@ -4,39 +4,49 @@ import Layout from "../layouts/Layout.astro";
 import SocialPill from "../components/SocialPill.astro";
 import LinkedIn from "../components/icons/LinkedIn.astro";
 import GitHub from "../components/icons/GitHub.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
+<Layout
+  title="Porfolio de David Martinez - desarrollador y programador Web con 2 años de experiencia"
+  description="Contrata a david para crear tu aplicación web o movil. Desarrollador Web. Especializado en crear aplicaciones únicas."
+>
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
+    <SectionContainer class ="py-44 pb-24">
       <div class="flex flex-row items-center gap-4 pb-4">
-        <img src="/src/assets/david-photo.png" alt="david photo" width="70" />
+        <img class="size-16" src="/src/assets/david-photo.png" alt="david photo" />
         <Badge />
       </div>
 
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
         Hey!, soy David <div class="flex justify-center items-center"></div>
       </h1>
-      <h2 class="text-xl text-wrap opacity-80 w-full lg:w-[700px]">
+      <h2 class="text-xl text-wrap opacity-80 w-full lg:w-[700px] pb-8">
         +2 años de experiencia.
         <span class="font-semibold text-amber-200"> Ingeniero de Software y diseñador UX/UI</span>
         de Concón, Chile, Especializado en el desarrollo de aplicaciones web únicas.
       </h2>
 
-      <SocialPill href="https://www.linkedin.com/in/dmmtapia/">
-        <LinkedIn />
-        LinkedIn
-      </SocialPill>
+      <div class="flex gap-2">
+        <SocialPill href="https://www.linkedin.com/in/dmmtapia/">
+          <LinkedIn />
+          LinkedIn
+        </SocialPill>
 
-      <SocialPill href="https://github.com/dmmtdeveloper">
-        <GitHub />
-        GitHub
-      </SocialPill>
-    </section>
+        <SocialPill href="https://github.com/dmmtdeveloper">
+          <GitHub />
+          GitHub
+        </SocialPill>
+      </div>
+    </SectionContainer>
+
+    <SectionContainer>
+      <h2 class="text-4xl font-semibold">Experiencia laboral</h2>
+      <Experience />
+    </SectionContainer>
   </main>
-  <!-- <Welcome /> -->
-  <!-- <Header/> -->
 </Layout>
