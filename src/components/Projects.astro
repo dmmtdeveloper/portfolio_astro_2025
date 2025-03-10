@@ -19,7 +19,23 @@ const TAGS = {
 const PROJECTS = [
   {
     title: "Enregla - grabado de patentes",
-    description: "creada desde cero con Next.Js y Tailwind CSS optimizada en CEO y performance",
+    description: "Creada y diseñada desde cero con Next.Js y Tailwind CSS optimizada en CEO y performance, el diseño previamente se realizo en figma.",
+    link: "https://www.enreglaintegral.cl/",
+    github: "#",
+    image: "public/projects/svg1.webp",
+    tags: [TAGS.NEXT, TAGS.TAILDWIND],
+  },
+  {
+    title: "Enregla - grabado de patentes",
+    description: "Creada y diseñada desde cero con Next.Js y Tailwind CSS optimizada en CEO y performance, el diseño previamente se realizo en figma.",
+    link: "https://www.enreglaintegral.cl/",
+    github: "#",
+    image: "public/projects/svg1.webp",
+    tags: [TAGS.NEXT, TAGS.TAILDWIND],
+  },
+  {
+    title: "Enregla - grabado de patentes",
+    description: "Creada y diseñada desde cero con Next.Js y Tailwind CSS optimizada en CEO y performance, el diseño previamente se realizo en figma.",
     link: "https://www.enreglaintegral.cl/",
     github: "#",
     image: "public/projects/svg1.webp",
@@ -30,7 +46,7 @@ const PROJECTS = [
 
 {
   PROJECTS.map(({ title, description, link, tags, image }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+    <articl id="proyectos" class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 mt-16">
       <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
         <img
           class="rounded-2xl shadow-2xl shadow-white/10 h-58 w-140 object-cover object-top transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
@@ -44,7 +60,7 @@ const PROJECTS = [
         <ul class="flex gap-x-4 flex-row pt-2">
           {tags.map((tag) => (
             <li>
-              <span class={`flex text-xs rounded-full py-1 px-4 ${tag.color}`}>
+              <span class={`flex text-xs rounded-full gap-2 py-1 px-4 text-white ${tag.color}`}>
                 <tag.icon class="size-4" />
                 {tag.name}
               </span>
