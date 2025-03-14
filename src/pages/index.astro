@@ -1,18 +1,19 @@
 ---
+import About from "../components/About.astro";
 import Badge from "../components/Badge.astro";
-import Layout from "../layouts/Layout.astro";
-import SocialPill from "../components/SocialPill.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
-import GitHub from "../components/icons/GitHub.astro";
+import Code from "../components/icons/Code.astro";
 import Experience from "../components/Experience.astro";
-import SectionContainer from "../components/SectionContainer.astro";
+import Footer from "../components/Footer.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import Layout from "../layouts/Layout.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
 import Mail from "../components/icons/Mail.astro";
 import Maleta from "../components/icons/Maleta.astro";
-import Code from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
-import Footer from "../components/Footer.astro";
-import About from "../components/About.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
 import TitleSection from "../components/TitleSection.astro";
+import Hero from "../components/Hero.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -24,61 +25,31 @@ import TitleSection from "../components/TitleSection.astro";
 >
   <main class="px-8">
     <SectionContainer class="py-20 pb-16 lg:pb-40 lg:pt-36">
-      <div class="flex flex-row items-center gap-4 pb-4">
-        <img class="size-16" src="/src/assets/david-photo.png" alt="david photo" />
-        <Badge />
-      </div>
-
-      <h1 class="text-white text-4xl md:text-4xl xl:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-6">
-        Hey!, soy David <div class="flex justify-center items-center"></div>
-      </h1>
-      <p class="text-xl text-wrap opacity-80 w-full lg:w-[700px] pb-8 text-white">
-        +2 años de experiencia.
-        <span class="font-semibold text-amber-200">
-          Ingeniero de Software con sólidos conocimientos en diseño UX/UI</span
-        >
-        de Concón Chile, Especializado en el desarrollo de aplicaciones web únicas.
-      </p>
-
-      <div class="flex gap-4">
-        <SocialPill href="https://www.linkedin.com/in/dmmtapia/">
-          <LinkedIn />
-          LinkedIn
-        </SocialPill>
-
-        <!-- <SocialPill href="https://github.com/dmmtdeveloper">
-          <GitHub />
-          GitHub
-        </SocialPill> -->
-        <SocialPill href="mailto:">
-          <Mail />
-          Contactame
-        </SocialPill>
-      </div>
-    </SectionContainer>
-
-    <SectionContainer>
-      <TitleSection>
-        <Maleta id="experiencia" class="size-8" />
-        Experiencia laboral
-      </TitleSection>
-      <Experience />
-    </SectionContainer>
-
-    <SectionContainer class="pt-16">
-      <TitleSection>
-        <Code class="size-8" />
-        Proyectos
-      </TitleSection>
-      <Projects />
-    </SectionContainer>
-
-    <SectionContainer class="pt-16">
-      <About />
-    </SectionContainer>
-
-    <SectionContainer class="pt-16">
-      <Footer />
+      <Hero />
     </SectionContainer>
   </main>
+
+  <SectionContainer>
+    <TitleSection>
+      <Maleta id="experiencia" class="size-8" />
+      Experiencia laboral
+    </TitleSection>
+    <Experience />
+  </SectionContainer>
+
+  <SectionContainer class="pt-16">
+    <TitleSection>
+      <Code class="size-8" />
+      Proyectos
+    </TitleSection>
+    <Projects />
+  </SectionContainer>
+
+  <SectionContainer class="pt-16">
+    <About />
+  </SectionContainer>
+
+  <SectionContainer class="pt-16">
+    <Footer />
+  </SectionContainer>
 </Layout>

@@ -1,0 +1,36 @@
+---
+import Badge from "./Badge.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import Mail from "./icons/Mail.astro";
+import SocialPill from "./SocialPill.astro";
+---
+
+<div class="max-w-xl">
+  <div class="flex flex-row items-center gap-4 pb-4">
+    <img class="size-16" src="/src/assets/david-photo.png" alt="david photo" />
+    <Badge />
+  </div>
+
+  <h1 class="text-white text-4xl md:text-4xl xl:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-6">
+    Hey!, soy David <div class="flex justify-center items-center"></div>
+  </h1>
+  <p class="text-xl text-wrap opacity-80 w-full lg:w-[700px] pb-8 text-white">
+    +2 años de experiencia.
+    <span class="font-semibold text-amber-200">
+      Ingeniero de Software con sólidos conocimientos en diseño UX/UI</span
+    >
+    de Concón Chile, Especializado en el desarrollo de aplicaciones web únicas.
+  </p>
+
+  <div class="flex gap-4">
+    <SocialPill href="https://www.linkedin.com/in/dmmtapia/">
+      <LinkedIn />
+      LinkedIn
+    </SocialPill>
+
+    <SocialPill href="mailto:">
+      <Mail />
+      Contactame
+    </SocialPill>
+  </div>
+</div>

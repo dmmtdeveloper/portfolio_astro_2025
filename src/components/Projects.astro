@@ -1,6 +1,8 @@
 ---
+import GitHub from "./icons/GitHub.astro";
 import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
+import SocialPill from "./SocialPill.astro";
 
 const TAGS = {
   NEXT: {
@@ -19,25 +21,10 @@ const TAGS = {
 const PROJECTS = [
   {
     title: "Enregla - grabado de patentes",
-    description: "Creada y diseñada desde cero con Next.Js y Tailwind CSS optimizada en CEO y performance, el diseño previamente se realizo en figma.",
+    description:
+      "Creada y diseñada desde cero con Next.Js y Tailwind CSS optimizada en CEO y performance, el diseño previamente se realizo en figma.",
     link: "https://www.enreglaintegral.cl/",
-    github: "#",
-    image: "public/projects/svg1.webp",
-    tags: [TAGS.NEXT, TAGS.TAILDWIND],
-  },
-  {
-    title: "Enregla - grabado de patentes",
-    description: "Creada y diseñada desde cero con Next.Js y Tailwind CSS optimizada en CEO y performance, el diseño previamente se realizo en figma.",
-    link: "https://www.enreglaintegral.cl/",
-    github: "#",
-    image: "public/projects/svg1.webp",
-    tags: [TAGS.NEXT, TAGS.TAILDWIND],
-  },
-  {
-    title: "Enregla - grabado de patentes",
-    description: "Creada y diseñada desde cero con Next.Js y Tailwind CSS optimizada en CEO y performance, el diseño previamente se realizo en figma.",
-    link: "https://www.enreglaintegral.cl/",
-    github: "#",
+    github: "https://github.com/dmmtdeveloper",
     image: "public/projects/svg1.webp",
     tags: [TAGS.NEXT, TAGS.TAILDWIND],
   },
@@ -45,8 +32,11 @@ const PROJECTS = [
 ---
 
 {
-  PROJECTS.map(({ title, description, link, tags, image }) => (
-    <articl id="proyectos" class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 mt-16">
+  PROJECTS.map(({ title, description, link, tags, image, github }) => (
+    <article
+      id="proyectos"
+      class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 mt-16"
+    >
       <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
         <img
           class="rounded-2xl shadow-2xl shadow-white/10 h-58 w-140 object-cover object-top transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
@@ -68,6 +58,14 @@ const PROJECTS = [
           ))}
         </ul>
         <p class="mt-2 text-gray-700 dark:text-gray-400">{description}</p>
+
+        <div class="flex gap-4 pt-4">
+          <SocialPill href={link}>Saber más...</SocialPill>
+          <SocialPill href={github}>
+            <GitHub />
+            GitHub
+          </SocialPill>
+        </div>
       </div>
     </article>
   ))
