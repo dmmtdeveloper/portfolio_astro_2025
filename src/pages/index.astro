@@ -14,6 +14,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 import SocialPill from "../components/SocialPill.astro";
 import TitleSection from "../components/TitleSection.astro";
 import Hero from "../components/Hero.astro";
+import Skills from "../components/Skills.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -43,6 +44,14 @@ import Hero from "../components/Hero.astro";
       Proyectos
     </TitleSection>
     <Projects />
+  </SectionContainer>
+
+  <SectionContainer class="pt-16">
+    <TitleSection>
+      <Code class="size-8" />
+      Hard Skills
+    </TitleSection>
+    <Skills />
   </SectionContainer>
 
   <SectionContainer class="pt-16">

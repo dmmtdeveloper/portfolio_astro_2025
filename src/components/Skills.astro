@@ -1,0 +1,56 @@
+<section class="lg:w-[740px] mx-auto sm:px-0 pt-12 lg:px-[28px] px-4">
+  <div
+    class="inline-flex flex-nowrap overflow-hidden
+           [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]
+           w-[250px] mx-[calc((100%-250px)/2)] md:w-[750px] md:mx-[calc((100%-750px)/2)]"
+  >
+    <ul
+      class="flex lg:gap-2 gap-8 items-center justify-center md:justify-start
+             [&_li]:mx-2 xl:[&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll
+             min-w-max"
+    >
+      <li><img src="/src/assets/html-5-clean.svg" alt="HTML" class="size-16" /></li>
+      <li><img src="/src/assets/css-3-clean.svg" alt="CSS" class="h-16" /></li>
+      <li><img src="/src/assets/tailwindcss-icon.svg" alt="Tailwind" class="size-20" /></li>
+      <li><img src="/src/assets/javascript.svg" alt="JavaScript" class="size-16" /></li>
+      <li><img src="/src/assets/typescript-icon.svg" alt="TypeScript" class="h-16" /></li>
+      <li><img src="/src/assets/astro-icon-white.svg" alt="Astro" class="h-15" /></li>
+      <li><img src="/src/assets/react.svg" alt="react" class="h-15" /></li>
+      <li><img src="/src/assets/postman-icon.svg" alt="postman" class="h-15" /></li>
+      <li><img src="/src/assets/material-ui.svg" alt="material" class="h-15" /></li>
+      <!-- Se duplican los elementos para lograr un desplazamiento sin cortes -->
+    </ul>
+    
+    <ul
+    class="flex lg:gap-2 gap-8 items-center justify-center md:justify-start
+    [&_li]:mx-2 xl:[&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll
+    min-w-max"
+    >
+    <li><img src="/src/assets/html-5-clean.svg" alt="HTML" class="size-16" /></li>
+    <li><img src="/src/assets/css-3-clean.svg" alt="CSS" class="h-16" /></li>
+    <li><img src="/src/assets/tailwindcss-icon.svg" alt="Tailwind" class="size-20" /></li>
+    <li><img src="/src/assets/javascript.svg" alt="JavaScript" class="size-16" /></li>
+    <li><img src="/src/assets/typescript-icon.svg" alt="TypeScript" class="h-16" /></li>
+    <li><img src="/src/assets/astro-icon-white.svg" alt="Astro" class="h-15" /></li>
+    <li><img src="/src/assets/react.svg" alt="react" class="h-15" /></li>
+    <li><img src="/src/assets/postman-icon.svg" alt="postman" class="h-15" /></li>
+    <li><img src="/src/assets/material-ui.svg" alt="material" class="h-15" /></li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .animate-infinite-scroll {
+    display: flex;
+    animation: infinite-scroll 20s linear infinite;
+  }
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+</style>
