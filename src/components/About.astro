@@ -1,26 +1,19 @@
+---
+import AboutIcon from "@components/icons/AboutIcon.astro";
+import TitleSection from "@components/TitleSection.astro";
+---
+
 <section
   id="sobre-mi"
   data-section="sobre-mi"
-  class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+  class="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl pt-32"
 >
-  <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white undefined">
-    <svg
-      class="size-8"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      stroke-width="2"
-      stroke="currentColor"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"
-      ></path><path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path><path d="M15 19l2 2l4 -4"></path></svg
-    >
+  <TitleSection>
+    <AboutIcon />
     Sobre mí
-  </h2>
+  </TitleSection>
   <article
-    class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+    class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row pt-4"
   >
     <div
       class="text-justify [&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
@@ -42,8 +35,9 @@
         combinando rendimiento, accesibilidad y una experiencia de usuario óptima.
       </p>
       <p>
-        Además de mi interes por la tecnología, <strong><em>disfruto hacer deporte y pasar tiempo con mis amigos</em></strong>, ya que me
-        ayuda a mantener un equilibrio entre mi vida profesional y personal.
+        Además de mi interes por la tecnología, <strong
+          ><em>disfruto hacer deporte y pasar tiempo con mis amigos</em></strong
+        >, ya que me ayuda a mantener un equilibrio entre mi vida profesional y personal.
       </p>
     </div>
     <img

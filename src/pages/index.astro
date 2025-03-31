@@ -1,60 +1,40 @@
 ---
 import About from "@components/About.astro";
-
-import Code from "@components/icons/Code.astro";
 import Experience from "@components/Experience.astro";
 import Footer from "@components/Footer.astro";
 import Layout from "@layouts/Layout.astro";
-import Maleta from "@components/icons/Maleta.astro";
 import Projects from "@components/Projects.astro";
 import SectionContainer from "@components/SectionContainer.astro";
-import TitleSection from "@components/TitleSection.astro";
 import Hero from "@components/Hero.astro";
 import Skills from "@components/Skills.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout
   title="Porfolio de David Martinez - desarrollador y programador Web con 2 años de experiencia"
   description="Contrata a david para crear tu aplicación web o movil. Desarrollador Web. Especializado en crear aplicaciones únicas."
 >
-  <main class="px-8">
-    <SectionContainer class="py-20 pb-16 lg:pb-40 lg:pt-36">
-      <Hero />
-    </SectionContainer>
-  </main>
+  <!-- Hero-section -->
+  <SectionContainer class="py-20 pb-16 lg:pb-40 lg:pt-36">
+    <Hero />
+  </SectionContainer>
 
-  <SectionContainer>
-    <TitleSection>
-      <Maleta id="experiencia" class="size-8" />
-      Experiencia laboral
-    </TitleSection>
+  <!-- Experience-section -->
+  <SectionContainer id="experiencia">
     <Experience />
   </SectionContainer>
 
-  <SectionContainer class="pt-16">
-    <TitleSection>
-      <Code class="size-8" />
-      Proyectos
-    </TitleSection>
+  <!-- Projects-section -->
+  <SectionContainer id="proyectos">
     <Projects />
   </SectionContainer>
 
-  <SectionContainer class="pt-16">
-    <TitleSection>
-      <Code class="size-8" />
-      Skills
-    </TitleSection>
+  <!-- skills-section -->
+  <SectionContainer id="skills">
     <Skills />
   </SectionContainer>
 
-  <SectionContainer class="pt-16">
+  <!-- About-section -->
+  <SectionContainer id="sobre-mi">
     <About />
-  </SectionContainer>
-
-  <SectionContainer class="pt-16">
-    <Footer />
   </SectionContainer>
 </Layout>

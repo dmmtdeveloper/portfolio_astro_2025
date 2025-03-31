@@ -1,5 +1,7 @@
 ---
 import ExperienceItems from "@components/ExperienceItems.astro";
+import TitleSection from "./TitleSection.astro";
+import Maleta from "./icons/Maleta.astro";
 
 const EXPERIENCE = [
   {
@@ -45,12 +47,19 @@ const EXPERIENCE = [
 ];
 ---
 
-<ol class="relative mt-16">
-  {
-    EXPERIENCE.map((experience) => (
-      <li class="px-4">
-        <ExperienceItems {...experience} />
-      </li>
-    ))
-  }
-</ol>
+<section id="experiencia" data-section="experiencia">
+  <TitleSection>
+    <Maleta class="size-8" />
+    Experiencia laboral
+  </TitleSection>
+
+  <ol class="relative mt-16">
+    {
+      EXPERIENCE.map((experience) => (
+        <li class="px-4">
+          <ExperienceItems {...experience} />
+        </li>
+      ))
+    }
+  </ol>
+</section>

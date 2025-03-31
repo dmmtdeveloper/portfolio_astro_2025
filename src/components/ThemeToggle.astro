@@ -4,6 +4,7 @@ import MoonIcon from "@components/icons/Moon.astro";
 import SystemIcon from "@components/icons/System.astro";
 
 const THEMES = ["Light", "Dark", "System"];
+
 ---
 
 <div class="relative ml-1 mr-2">
@@ -53,7 +54,7 @@ const THEMES = ["Light", "Dark", "System"];
   }
 </style>
 
-<script is:inline>
+ <script is:inline>
   let remove = null;
   const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
   const themesMenu = document.getElementById("themes-menu");
