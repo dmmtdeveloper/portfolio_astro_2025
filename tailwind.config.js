@@ -1,12 +1,9 @@
-import { Config } from "tailwindcss";
-
-const config = {
-  content: ["./src/**/*.{astro,js,jsx,tsx,ts}"],
-  darkMode: "class", // 👈 Habilitar modo oscuro manual
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: "class",
   theme: {
     extend: {},
   },
   plugins: [],
 };
-
-export default config;

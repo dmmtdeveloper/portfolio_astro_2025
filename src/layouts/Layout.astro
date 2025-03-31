@@ -5,8 +5,6 @@ import "@styles/global.css";
 import Footer from "../components/Footer.astro";
 import NavBar from "@components/shared/NavBar.astro";
 import { ClientRouter } from "astro:transitions";
-import { DarkMode } from "src/utils/ThemeTogglee";
-// import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -16,7 +14,8 @@ interface Props {
 const { description, title } = Astro.props;
 ---
 
-<!doctype html>
+
+
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -29,7 +28,8 @@ const { description, title } = Astro.props;
     <ClientRouter />
   </head>
 
-  <body class="relative text-black dark:text-white">
+  <body class="relative text-black dark:text-white dark:bg-white"
+    >>
     <div
       class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
       bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
