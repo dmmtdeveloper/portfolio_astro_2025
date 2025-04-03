@@ -6,7 +6,7 @@ import TitleSection from "@components/TitleSection.astro";
 <section
   id="sobre-mi"
   data-section="sobre-mi"
-  class="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl pt-32"
+  class="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl pt-44"
 >
   <TitleSection>
     <AboutIcon />
@@ -16,36 +16,34 @@ import TitleSection from "@components/TitleSection.astro";
     class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row pt-4"
   >
     <div
-      class="text-justify [&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+      class="text-justify flex gap-4 flex-col font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1 "
     >
-      <p>
-        Hola! Soy David Martínez desarrollador de software.
-        <br />
-        <strong
-          ><em
-            >Actuamente soy frontend developer en Socius en donde he aportado soluciones eficientes y
-            centradas en el usuario</em
-          ></strong
-        >.
+      <p class="font-semibold">Hola! Soy David Martínez desarrollador de software.</p>
+      <p class="font-normal text-yellow-500 dark:text-yellow-200">
+        Actuamente soy frontend developer en socius arquitectura y plataformas tecnológicas en donde he
+        aportado en la creación de aplicativos con soluciones eficientes y centradas en el usuario.
       </p>
-      <p>
+
+      <p class="font-semibold">
         Uno de mis mayores logros ha sido realizar un cambio en mi carrera y entrar en la industria del
-        desarrollo de software. En el año 2024 desarrolle una
-        <strong><em>página web interactiva utilizando Next.js, TypeScript y Tailwind CSS,</em></strong>
-        combinando rendimiento, accesibilidad y una experiencia de usuario óptima.
+        desarrollo de software.
       </p>
-      <p>
-        Además de mi interes por la tecnología, <strong
-          ><em>disfruto hacer deporte y pasar tiempo con mis amigos</em></strong
-        >, ya que me ayuda a mantener un equilibrio entre mi vida profesional y personal.
+
+      <p class="font-normal text-green-400">
+        En el año 2024 desarrolle una página web interactiva utilizando Next.js, TypeScript y Tailwind CSS.
+      </p>
+
+      <p class="font-semibold">
+        Además de mi interes por la tecnología, disfruto hacer deporte y pasar tiempo con mis amigos.
       </p>
     </div>
     <img
-      width="200"
+      width="
+          200"
       height="200"
       src="/src/assets/david.png"
       alt="David Martinez"
-      class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+      class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-slate-400 dark:bg-slate-800 ring-1 ring-slate-600 dark:ring-white/20"
       style="object-position: 50% 50%"
     />
   </article>

@@ -1,9 +1,8 @@
 ---
 import Badge from "@components/Badge.astro";
-import LinkedIn from "@components/icons/LinkedIn.astro";
-import Mail from "@components/icons/Mail.astro";
-import SocialPill from "@components/SocialPill.astro";
-import "@styles/global.css"
+import LinkedInButton from "./ui/LinkedInButton.astro";
+import ContactButton from "./ui/ContactButton.astro";
+import "@styles/global.css";
 ---
 
 <section id="inicio" data-section="inicio">
@@ -12,24 +11,21 @@ import "@styles/global.css"
     <Badge />
   </div>
 
-  <h1 class="text-black dark:text-white text-4xl md:text-4xl xl:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-6">
+  <h1
+    class="text-black dark:text-white text-4xl md:text-4xl xl:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-6"
+  >
     Hey!, soy David <div class="flex justify-center items-center"></div>
   </h1>
-  <p class="text-xl text-wrap opacity-80 w-full lg:w-[700px] pb-8 text-black dark:text-white">
+  <p
+    class="text-xl text-wrap w-full lg:w-[590px] pb-8 mt-6 text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
     +2 años de experiencia.
-    <span class="font-semibold text-amber-200"> Frontend Developer & Diseñador UX/UI</span>
-    de Concón Chile, Especializado en el desarrollo de aplicaciones web únicas.
+    <strong> Frontend Developer & Diseño UX/UI</strong>
+    de Concón Chile, Especializado en el desarrollo de aplicaciones web únicas centradas en el usuario.
   </p>
 
   <div class="flex gap-4">
-    <SocialPill href="https://www.linkedin.com/in/dmmtapia/">
-      <LinkedIn />
-      LinkedIn
-    </SocialPill>
-
-    <SocialPill href="mailto:dmmtapia.ux@gmail.com">
-      <Mail />
-      Contactame
-    </SocialPill>
+    <ContactButton />
+    <LinkedInButton />
   </div>
 </section>

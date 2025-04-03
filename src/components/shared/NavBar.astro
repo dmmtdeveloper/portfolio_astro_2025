@@ -94,22 +94,17 @@ const navItems = [
     animation-range: 0 100px;
   }
 
-  nav {
-    background-color: rgba(31, 41, 55, 0.9); /* Equivalente a bg-white/50 */
-  }
 
-  .dark nav {
-    background-color: rgba(31, 41, 55, 0.9); /* Equivalente a dark:bg-gray-800/90 */
-  }
 
   @keyframes nav-shadown {
     0% {
-      background-color: rgba(255, 255, 255, 0); /* Equivalente a bg-white/0 */
       box-shadow: none;
     }
+
+    
     100% {
       box-shadow:
-        0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 10px 15px -3px rgba(129, 61, 61, 0.1),
         0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
       backdrop-filter: blur(10px); /* backdrop-blur */
       ring-width: 1px;
