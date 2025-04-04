@@ -2,12 +2,11 @@
 import GitHub from "@components/icons/GitHub.astro";
 import NextJS from "@components/icons/NextJS.astro";
 import Tailwind from "@components/icons/Tailwind.astro";
-import SocialPill from "@components/SocialPill.astro";
 import TitleSection from "./TitleSection.astro";
 import Code from "./icons/Code.astro";
 import LinkButton from "./LinkButton.astro";
 import Link from "./icons/Link.astro";
-import Animation from "./animation/Animation.astro";
+
 
 const TAGS = {
   NEXT: {
@@ -67,10 +66,9 @@ const PROJECTS = [
     {
       PROJECTS.map(({ title, description, link, tags, imageWhite, imageDark, github }) => (
         <div>
-          <Animation>
-            <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 mt-8">
-              <div
-                class="relative flex flex-col items-center 
+          <article class="blockanimation flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 mt-8">
+            <div
+              class="relative flex flex-col items-center 
                           col-span-6 row-span-5 gap-8 transition duration-500 
                           ease-in-out transform shadow-xl overflow-clip rounded-xl 
                           sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl 
@@ -78,55 +76,73 @@ const PROJECTS = [
                           lg:hover:border-gray-400 
                           lg:border-gray-300 
                           dark:lg:hover:bg-gray-800/50"
-              >
-                <a href={link} rel="noopener noreferrer" target="_blank">
-                  <img
-                    class="rounded-2xl w-330 h-65 object-cover flex items-center dark:hidden transition duration-500  md:scale-110 md:group-hover:scale-105"
-                    src={imageWhite}
-                    alt={`captura de pantalla del proyecto ${imageWhite}`}
-                    loading="lazy"
-                  />
-                  <img
-                    class="rounded-2xl w-330 h-65 object-cover items-center hidden dark:flex transition duration-500  md:scale-110 md:group-hover:scale-105"
-                    src={imageDark}
-                    alt={`captura de pantalla del proyecto ${imageDark}`}
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-              <div>
-                <h3 class="text-2xl font-semibold text-black mb-2 dark:text-white">{title}</h3>
-                <ul class="flex gap-x-4 flex-row pt-2">
-                  {tags.map((tag) => (
-                    <li>
-                      <span class={`flex text-xs rounded-full gap-2 py-1 px-4 text-white ${tag.color}`}>
-                        <tag.icon class="size-4" />
-                        {tag.name}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                <p class="mt-2 text-gray-700 dark:text-gray-400">{description}</p>
+            >
+              <a href={link} rel="noopener noreferrer" target="_blank">
+                <img
+                  class="rounded-2xl w-330 h-65 object-cover flex items-center dark:hidden transition duration-500  md:scale-110 md:group-hover:scale-105"
+                  src={imageWhite}
+                  alt={`captura de pantalla del proyecto ${imageWhite}`}
+                  loading="lazy"
+                />
+                <img
+                  class="rounded-2xl w-330 h-65 object-cover items-center hidden dark:flex transition duration-500  md:scale-110 md:group-hover:scale-105"
+                  src={imageDark}
+                  alt={`captura de pantalla del proyecto ${imageDark}`}
+                  loading="lazy"
+                />
+              </a>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-black mb-2 dark:text-white">{title}</h3>
+              <ul class="flex gap-x-4 flex-row pt-2">
+                {tags.map((tag) => (
+                  <li>
+                    <span class={`flex text-xs rounded-full gap-2 py-1 px-4 text-white ${tag.color}`}>
+                      <tag.icon class="size-4" />
+                      {tag.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p class="mt-2 text-gray-700 dark:text-gray-400">{description}</p>
 
-                <footer class="flex items-end justify-start mt-4 gap-x-4 ">
-                  {github && (
-                    <LinkButton href={github}>
-                      <GitHub />
-                      Code
-                    </LinkButton>
-                  )}
-                  {link && (
-                    <LinkButton href={link}>
-                      <Link />
-                      Preview
-                    </LinkButton>
-                  )}
-                </footer>
-              </div>
-            </article>
-          </Animation>
+              <footer class="flex items-end justify-start mt-4 gap-x-4 ">
+                {github && (
+                  <LinkButton href={github}>
+                    <GitHub />
+                    Code
+                  </LinkButton>
+                )}
+                {link && (
+                  <LinkButton href={link}>
+                    <Link />
+                    Preview
+                  </LinkButton>
+                )}
+              </footer>
+            </div>
+          </article>
         </div>
       ))
     }
   </div>
 </section>
+
+<style>
+  @keyframes appear {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
+  .blockanimation {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+</style>

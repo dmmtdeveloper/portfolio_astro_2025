@@ -1,16 +1,101 @@
-<footer class="p-8 mt-32">
-  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-      >© 2025 Casi todos los derechos reservados.
-    </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-      <li>
-        <a href="#" class="hover:underline me-4 md:me-6">Sobre mí</a>
-      </li>
+---
+import SectionContainer from "./SectionContainer.astro";
+import DarkModeButton from "./ui/darkModeButton.astro";
 
-      <li>
-        <a href="#" class="hover:underline">Contacto</a>
-      </li>
-    </ul>
+const currentYear = new Date().getFullYear();
+
+const footerItems = [
+  {
+    title: "inicio",
+    link: "/",
+  },
+  {
+    title: "proyectos",
+    link: "/#proyectos",
+  },
+  {
+    title: "skills",
+    link: "/#skills",
+  },
+  {
+    title: "sobre mí",
+    link: "/#sobre-mi",
+  },
+];
+
+const contactItems = [
+  {
+    title: "dmmtapia.ux@gmail.com",
+    link: "mailto:dmmtapia.ux@gmail.com",
+  },
+  {
+    title: "+56 956918388",
+  },
+  {
+    title: "Github",
+    link: "https://github.com/dmmtdeveloper",
+  },
+];
+---
+
+<SectionContainer>
+  <section class="pt-10 flex justify-center items-center flex-col md:mt-24">
+    <div class="flex flex-col sm:flex-row lg:items-start xl:items-start md:flex-row pb-2 w-full">
+      <div class="flex-1 flex flex-col gap-2">
+        <div class="flex gap-4 flex-row md:mt-0">
+          <DarkModeButton />
+        </div>
+      </div>
+
+      <div class="flex-[1] w-full flex xl:flex-row justify-between flex-wrap">
+        <div class="flex flex-col min-w-[150px]">
+          <div>
+            <h4 class="dark:text-white text-black text-small font-semibold leading-[27px]">Contacto</h4>
+          </div>
+
+          <div>
+            {
+              contactItems.map((item) => (
+                <ul>
+                  <li class="my-2 text-sm leading-[24px] cursor-pointer">
+                    <a target="_blank" rel="noopener noreferrer" href={item.link}>
+                      {item.title}
+                    </a>
+                  </li>
+                </ul>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col min-w-[150px]">
+        <div>
+          <h4 class="dark:text-white text-black text-small font-semibold leading-[27px]">Información</h4>
+        </div>
+
+        <div>
+          <div style="opacity: 1; transform: none; will-change: auto;">
+            {
+              footerItems.map((item) => (
+                <ul>
+                  <li class="hover:text-sky-400 transition-all capitalize my-2 text-sm leading-[24px] cursor-pointer">
+                    <a href={item.link}>{item.title}</a>
+                  </li>
+                </ul>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div
+    class="w-full md:flex-col flex justify-between items-center flex-col border-t-[1px] dark:border-t-gray-800 border-t-black-200 pb-4"
+  >
+    <small class="dark:text-white-200 text-black-200 text-xs text-center mt-4"
+      >portfolio ©{currentYear} realizado con astro y tailwindcss. casi todos los derechos reservados</small
+    >
   </div>
-</footer>
+</SectionContainer>
