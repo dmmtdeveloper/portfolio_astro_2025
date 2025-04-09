@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { navItems } from "@interfaces/NavItems";
 import DarkModeButton from "@components/ui/darkModeButton";
+
 import clsx from "clsx";
+import { Logo } from "./logo";
 
 export const BurguerDinamic = () => {
   const [open, setOpen] = useState(false);
@@ -41,16 +43,16 @@ export const BurguerDinamic = () => {
   return (
     <section
       className={clsx(
-        "fixed left-0 top-0 w-full h-14 flex md:justify-end items-center dark:bg-slate-900 justify-center",
-        scrolled && "dark:bg-slate-800  shadow-md transition-all backdrop-blur-[1rem]"
+        "fixed left-0 top-0 w-full h-14 flex md:justify-end items-center  justify-center",
+        scrolled && "  shadow-md transition-all backdrop-blur-[1rem]"
       )}
     >
       <div className=" flex items-center justify-center gap-4">
         <DarkModeButton />
       </div>
       {/* Logo a la izquierda */}
-      <div className="fixed top-2 left-0 z-[999] pl-4 pt-2">
-        <p className="text-slate-500 dark:text-white font-bold">davdev</p>
+      <div className="fixed pl-4 left-0 z-[999] ">
+        <Logo className="size-20" id="logo" />
       </div>
 
       {/* Menú hamburguesa a la derecha */}
