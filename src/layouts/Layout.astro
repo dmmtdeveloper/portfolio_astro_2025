@@ -3,9 +3,11 @@ import "@fontsource-variable/onest";
 import "@styles/global.css";
 
 import Footer from "@components/shared/Footer.astro";
-import NavBar from "@components/shared/NavBar.astro";
 import { ClientRouter } from "astro:transitions";
 import { NavbarComponent } from "@components/shared/NavBarComponent";
+
+
+
 
 interface Props {
   title: string;
@@ -35,7 +37,8 @@ const { description, title } = Astro.props;
     >
     </div>
     <!-- <NavBar /> -->
-     <NavbarComponent client:load />
+    <NavbarComponent client:load />
+  
     <slot />
     <Footer />
   </body>
