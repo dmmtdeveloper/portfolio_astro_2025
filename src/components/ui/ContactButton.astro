@@ -1,9 +1,11 @@
 ---
 import Mail from "@components/icons/Mail.astro";
 import SocialPill from "@components/SocialPill.astro";
+
+const { class: className } = Astro.props;
 ---
 
-<SocialPill href="mailto:dmmtapia.ux@gmail.com">
-  <Mail class="size-4"/>
+<SocialPill href="mailto:dmmtapia.ux@gmail.com" class={className}>
+  <Mail class="size-4" />
   Contactame
 </SocialPill>

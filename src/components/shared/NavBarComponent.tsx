@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import clsx from "clsx"; // opcional: para clases condicionales
 import { ThemeToggle } from "@components/ThemeToggle";
 import { navItems } from "@interfaces/NavItems";
-import { Sidebar } from "./nav";
+import { Sidebar } from "@components/shared/Nav";
 
 export const NavbarComponent = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -65,7 +65,7 @@ export const NavbarComponent = () => {
         ))}
         <ThemeToggle />
       </nav>
-      <div className="md:hidden ">
+      <div className="md:hidden">
         <Sidebar />
       </div>
     </header>
