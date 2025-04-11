@@ -3,11 +3,18 @@ import Badge from "@components/Badge.astro";
 import LinkedInButton from "./ui/LinkedInButton.astro";
 import ContactButton from "./ui/ContactButton.astro";
 import "@styles/global.css";
+import BadgeImage from "./Badge-image.astro";
 ---
 
-<section id="inicio" data-section="inicio" class="flex flex-col items-center  md:items-start text-center md:text-left max-w-4xl mx-auto px-0 lg:px-0">
-  <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 pb-4 pt-24 md:pt-0">
-    <img class="md:size-16 size-32 object-cover rounded-full" src="/projects/david.png" alt="david photo" />
+<section
+  id="inicio"
+  data-section="inicio"
+  class="flex flex-col items-center md:items-start text-center md:text-left max-w-4xl mx-auto px-0 lg:px-0"
+>
+  <div
+    class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 pb-4 pt-24 md:pt-0"
+  >
+    <BadgeImage />
     <Badge />
   </div>
 
@@ -25,7 +32,7 @@ import "@styles/global.css";
   </p>
 
   <div class="flex gap-4">
-    <ContactButton/>
+    <ContactButton />
     <LinkedInButton />
   </div>
 </section>
