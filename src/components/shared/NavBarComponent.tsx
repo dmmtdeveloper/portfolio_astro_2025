@@ -5,6 +5,10 @@ import clsx from "clsx"; // opcional: para clases condicionales
 import { ThemeToggle } from "@components/ThemeToggle";
 import { navItems } from "@interfaces/NavItems";
 import { Sidebar } from "@components/shared/Nav";
+import DarkMode from "@components/ui/DarkMode";
+import { BurguerDinamic } from "@components/icons/BurguerDinamic";
+import { Logger } from "node_modules/astro/dist/core/logger/core";
+import { Logo } from "@components/icons/Logo";
 
 export const NavbarComponent = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -65,8 +69,13 @@ export const NavbarComponent = () => {
         ))}
         <ThemeToggle />
       </nav>
-      <div className="md:hidden">
-        <Sidebar />
+      <div
+        className={clsx(
+          "fixed left-0 md:hidden top-0 w-full h-14 sm:flex md:justify-end items-center px-4",
+          scrolled && "shadow-md transition-all backdrop-blur-[1rem]"
+        )}
+      >
+        <BurguerDinamic className="pr-4" />
       </div>
     </header>
   );
