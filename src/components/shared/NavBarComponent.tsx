@@ -1,14 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import clsx from "clsx"; // opcional: para clases condicionales
 import { ThemeToggle } from "@components/ThemeToggle";
 import { navItems } from "@interfaces/NavItems";
-import { Sidebar } from "@components/shared/Nav";
-import DarkMode from "@components/ui/DarkMode";
 import { BurguerDinamic } from "@components/icons/BurguerDinamic";
-import { Logger } from "node_modules/astro/dist/core/logger/core";
-import { Logo } from "@components/icons/Logo";
+import clsx from "clsx"; 
+
 
 export const NavbarComponent = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
