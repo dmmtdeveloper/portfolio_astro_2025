@@ -2,8 +2,9 @@
 import Badge from "@components/Badge.astro";
 import LinkedInButton from "./ui/LinkedInButton.astro";
 import ContactButton from "./ui/ContactButton.astro";
-import "@styles/global.css";
+import CVButton from "./ui/CVButton.astro";
 import BadgeImage from "./Badge-image.astro";
+import "@styles/global.css";
 ---
 
 <section
@@ -32,7 +33,10 @@ import BadgeImage from "./Badge-image.astro";
   </p>
 
   <div class="flex gap-4">
-    <ContactButton />
+    <div class="hidden md:flex">
+      <ContactButton />
+    </div>
     <LinkedInButton />
+    <CVButton />
   </div>
 </section>
