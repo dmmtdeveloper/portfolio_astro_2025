@@ -6,7 +6,6 @@ import Footer from "@components/shared/Footer.astro";
 import { ClientRouter } from "astro:transitions";
 import { NavbarComponent } from "@components/shared/NavBarComponent";
 
-
 interface Props {
   title: string;
   description: string;
@@ -26,10 +25,10 @@ const { description, title } = Astro.props;
     <!-- <ViewTransitions /> -->
     <ClientRouter />
   </head>
-
-  <body class="relative text-black dark:text-white">
+  <body class="relative text-black dark:text-white overflow-x-hidden">
+    <!-- Background con gradiente simple sin patrones adicionales -->
     <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-auto w-full bg-gray-50 dark:bg-gray-950
+      class="fixed inset-0 z-[-2] w-full h-full bg-gray-50 dark:bg-gray-950
       bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
       dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
@@ -37,7 +36,7 @@ const { description, title } = Astro.props;
     <!-- <NavBar /> -->
 
     <NavbarComponent client:load />
-   
+
     <slot />
     <Footer />
   </body>
